@@ -1,0 +1,49 @@
+/*  
+Brandon Holmes, 500751878
+Nya Samahan, 500634913
+Rafael Natividadm, 500705909
+*/
+
+Q1
+
+?- add(4, [1, 2, 3], X).
+X = [1, 2, 3|_411]
+Yes (0.00s cpu, solution 1, maybe more)
+?- add(0, [a, b, c, d], X).
+X = X
+Yes (0.00s cpu, solution 1, maybe more)
+?- add(0, [], X).
+X = X
+Yes (0.00s cpu, solution 1, maybe more)
+X = X
+Yes (0.00s cpu, solution 2)
+?- add(3, [a, b, z, c], [a, b, c]).
+No (0.00s cpu)
+
+Q2
+
+?- convert([], []).
+Yes (0.00s cpu)
+?- convert([five], [5]).
+Yes (0.00s cpu)
+?- convert([one, two, three, four], [1, 2, 3, 4]).
+Yes (0.00s cpu)
+?- convert([two, four], []).
+No (0.00s cpu)
+?- convert([two, six], [two, six]).
+No (0.00s cpu)
+?- convert([four], 4).
+No (0.00s cpu)
+
+Q3
+?- grep([a], [a, b, [c, a], [a], d, [a], [[a]], e], X).
+X = [4, 6|_305]
+Yes (0.00s cpu, solution 1, maybe more)
+?- grep(live, [learn, as, if, you, were, to, live, forever], A).
+A = [7|_275]
+Yes (0.00s cpu, solution 1, maybe more)
+?- grep([1, 2], [a, b, [1, 2, 3], c, [1, 2], d], [5]).
+Yes (0.00s cpu, solution 1, maybe more)
+?- grep([[a], [b]], [1, 2, 3, 4, [a], [b], 7, 8, [[a], [b]], 10], X).
+X = [9|_315]
+Yes

@@ -1,0 +1,33 @@
+Part 1 
+
+Q2
+does not match, [F,[a,G|V]] is not the same as [F,[a,G,[V]],removing the | is not possible here unless V is a list as per "we cannot transform [X | Y] into [X,Y] since [X | Y] represents a list whose length depends on Y". 
+[F,[a,G|V]]
+F= a
+G=d
+V=[a]
+[a,[a,d,|a]
+
+[V,[F,d,a]] = [a],[a,d,a] 
+
+These are still not equivalent but youre explanation was not correct.
+
+Q6
+simplify answer, [G] cannot match mth210 because mth210 is not a list. 
+
+Q7
+[F,G | [k, [G,l]]] -> [F,G, [k, [G,l]]] is wrong, [F,G | [k, [G,l]]]-> [F,G,k, [G,l]] is the correct transformtation
+
+ answer is still correct with 
+ F=k
+ G=l
+ J=[l,l]
+ 
+Q8 
+[a,b | F] → simplify → [a,b,F] is wrong, You cannot remove the | until F is shwon as a list. 
+Then instead of [a,b,[F]] we have [a,b|F]
+[a,G,d | [e, {G | [c]]]] → simplify → [a, G, d, e, [G, [c]] is wrong. [[a,G,d | [e, {G | [c]]]] → [a, G, d, e, [G,c] is the proper transformtation
+
+to match second character of first list G=b 
+[a,b,d,e,[b,c]]
+with F=[d,e,[b,c]] both lists match as [a,b|F] -> [a,b|[d,e,[b,c]]] -> [a,b,d,e,[b,c]]
